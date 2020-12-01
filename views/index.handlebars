@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <h5 class="text-center display-5 my-4">Upload file</h5>
+        <form action="/uploads" method="POST" enctype="multipart/form-data">
+            <div class="custom-file mb-3">
+                <input type="file" name="upload-file" class="custom-file-input" id="upload-file">
+                <label for="upload-file" class="custom-file-label">Choose file</label>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary btn-block">
+        </form>
+    </div>
+</div>
+<script>
+    document.querySelector('.custom-file-input').addEventListener('change',function(e){
+        const fileName = document.getElementById("upload-file").files[0].name;
+        const nextSibling = e.target.nextElementSibling;
+        nextSibling.innerText = fileName;
+    })
+</script>
