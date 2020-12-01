@@ -1,0 +1,36 @@
+{
+  "name": "node-file-uploader",
+  "version": "1.0.0",
+  "description": "File uploader",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js",
+    "start-dev": "nodemon ./server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "multer",
+    "files"
+  ],
+  "author": {
+    "name": "Daniel Stefanelli",
+    "email": "daniel.stefanelli.h@gmail.com",
+    "url": "https://danielstefanelli.com"
+  },
+  "repository": {
+    "type": "Git",
+    "url": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.6",
+    "handlebars-intl": "^1.1.2",
+    "moment": "^2.24.0",
+    "multer": "^1.4.1"
+  }
+}
