@@ -88,7 +88,4 @@ Distributed under the MIT License.
 
 <!-- CONTACT -->
 ## Contact
-
-Daniel Stefanelli -
-[My portfolio](https://www.daniel.stefanelli.h@gmail.com) - 
 [daniel-stefanelli Linkedin](https://www.linkedin.com/in/daniel-stefanelli/)
