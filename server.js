@@ -34,6 +34,4 @@ app.post(
 
 const PORT = 8080;
 
-app.listen(PORT, () => {
-    console.log(`app is listening to port ${ PORT }`);
-});
+app.listen(PORT, () => console.log(`app is listening to port ${ PORT }`));
