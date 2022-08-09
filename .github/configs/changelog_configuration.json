@@ -1,0 +1,55 @@
+{
+  "categories": [
+    {
+      "title": "## \uD83D\uDE80 Features",
+      "labels": [
+        "feature"
+      ]
+    },
+    {
+      "title": "## \uD83D\uDC1B Fixes",
+      "labels": [
+        "fix"
+      ]
+    },
+    {
+      "title": "## \uD83E\uDDEA Tests",
+      "labels": [
+        "test"
+      ]
+    },
+    {
+      "title": "## \uD83D\uDCDA Docs",
+      "labels": [
+        "docs"
+      ]
+    },
+    {
+      "title": "## \uD83D\uDD28 Refactor",
+      "labels": [
+        "refactor"
+      ]
+    },
+    {
+      "title": "## \uD83D\uDC77 CI",
+      "labels": [
+        "ci"
+      ]
+    }
+  ],
+  "ignore_labels": [
+    "ignore"
+  ],
+  "sort": {
+    "order": "DESC",
+    "on_property": "mergedAt"
+  },
+  "template": "${{CHANGELOG}}\n\nUncategorized (${{UNCATEGORIZED_COUNT}})\n${{UNCATEGORIZED}}\n\nIgnored (${{IGNORED_COUNT}})\n${{IGNORED}}",
+  "pr_template": "- **${{TITLE}}** by @${{AUTHOR}} (PR: #${{NUMBER}})",
+  "empty_template": "- No changes",
+  "max_tags_to_fetch": 200,
+  "max_pull_requests": 100,
+  "max_back_track_time_days": 730,
+  "exclude_merge_branches": [],
+  "base_branches": []
+}

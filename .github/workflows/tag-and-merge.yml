@@ -1,0 +1,36 @@
+name: tag and merge
+
+on:
+  pull_request:
+    types: [ closed ]
+    branches:
+      - master
+
+jobs:
+  tag-and-merge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: "Set Tag"
+        uses: K-Phoen/semver-release-action@master
+        with:
+          release_branch: master
+          release_strategy: tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_PAT_TOKEN }}
+
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: "Set Git config"
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Github Actions"
+
+      - name: "Merge Master Back to Develop"
+        run: |
+          git fetch --unshallow
+          git checkout develop
+          git pull
+          git merge --no-ff master -m "Auto-merge master back to develop"
+          git push
